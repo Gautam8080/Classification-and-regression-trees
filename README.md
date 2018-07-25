@@ -39,8 +39,11 @@ Example of a decision tree in this case can be:
 Impurity is our chance of being incorrect if we randomly assign a label to an example. Therefore if we have 5 kinds of labels(colors) that can be assigned to a fruit of specific color, then our impurity will be 0.8 or 80%. The best question is which reduces our uncertainity the most. 
 Gini Impurity gives the amount of uncertainity at a node. Information gain notifies how much a question can reduce the Gini Impurity.
 
-We represent a question by storing colomn number and value. Ex- Q(1,3) represents if D>=3. The question function returns true or false. In response to the question function, Partition(rows, question) devides the data into 2 subsets: 
+We represent a question by storing colomn number and value. Ex- Q(1,3) represents if D>=3. The question function returns true or false. In response to the question function, Partition(rows, question) devides the data into 2 subsets by checking each row in that node: 
 
 1. rows for which question was true
 2. rows for which question was false
 
+While building the tree, we recursively partition the data on every node based on right question unless our information gain turns to be zero in that case, we do not have further questions and the node becomes a leaf.
+
+In simple language, we begin by calculating uncertainity of our starting set. Then for each possible question we can ask at that node, we try partitioning the data and calculate the uncertainityat true and false node (child nodes). We take weighed average of their uncertainity which can be passed to info gain function. This process is repeated for every possible question and best question is stored with highest info gain. We follow recursion on true and false branches and repeat until no more partition is possible. This node is called Leaf.
