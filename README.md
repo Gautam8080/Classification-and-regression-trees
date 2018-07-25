@@ -50,8 +50,8 @@ In simple language, we begin by calculating uncertainity of our starting set. Th
 
 ### Explaination of K-means is attached as a .docx file. 
 
-### Also we are performing 10-Fold Cross Validation on the data in the program. 
-It is basically breaking the data into 10 folds and using 1 fold as test data while remaining 9 folds as training data. We perform this with every fold.That is why we are getting 10 different accuracies in the result after we execute the program. Average of all accuracies will be net accuracy of model.
+### K-Fold Cross Validation
+Also we are performing 10-Fold Cross Validation on the data in the program. It is basically breaking the data into 10 folds and using 1 fold as test data while remaining 9 folds as training data. We perform this with every fold.That is why we are getting 10 different accuracies in the result after we execute the program. Average of all accuracies will be net accuracy of model.
 
 ## The Program
 In the Program, the data is first stored in a variable. Also the data is fed to K-means module that returns 3 clusters of data. Now we apply the decision tree on (whole dataset) vs (3 clusters indivisually) to yeild the result. 
