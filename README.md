@@ -11,7 +11,7 @@ In a Decision tree, each node is related to a particular set of data
                            {t=T : t(A) <= x} {t=T : t(A) > x}
                            
 Root node receives entire training set. Root node asks a question about one of features and (true or false) seperates the node into 2 branches. 
-The question being asked at a nide can vary with features. In case of numbers, the seperation can be based on a threshold, otherwise, it can be a simple if-else statement. 
+The question being asked at a node can vary with features. In case of numbers, the seperation can be based on a threshold, otherwise, it can be a simple if-else statement. 
 Let's take an example-
 
 Given we have a dataset:
