@@ -1,7 +1,8 @@
-# Classification-and-regression-trees with K-means
-This program compares results of "Decision trees on dataset" vs "Decision trees on clusters of dataset formed by kmeans"
+# Interative Decision Tree
+## Classification-and-regression-trees
+Classification and Regression Trees are ideally suited for analysis into complex ecological data (De'ath, 2000). Classification and Regression Trees are fairly traditional in data analysis, yet they remain to be one of the most effective ones in giving insights into the data. While neural networks have surpassed most machine learning techniques in performance, their decision process is complex and visualizing how they reach the predictions in entirety remains a challenge. Decision Trees, on the other hand, work on recursive partitioning of training set to obtain subsets as pure as possible. Each node in the tree represents a particular set of data that shrinks as the data trickles into the lower branches. That makes Decision Trees easy to peek into and understand why the classifier made a choice at certain nodes to reach the output. 
 
-## Explaination behind Classification and Regression Trees (CART)
+## Conceptual Understanding of Classification and Regression Trees (CART)
 "Recursive partioning of training set to obtain subsets as pure as possible"
 In a Decision tree, each node is related to a particular set of data
 
@@ -53,5 +54,9 @@ In simple language, we begin by calculating uncertainity of our starting set. Th
 ### K-Fold Cross Validation
 Also we are performing 10-Fold Cross Validation on the data in the program. It is basically breaking the data into 10 folds and using 1 fold as test data while remaining 9 folds as training data. We perform this with every fold.That is why we are getting 10 different accuracies in the result after we execute the program. Average of all accuracies will be net accuracy of model.
 
-## The Program
+## Proposed Research I
+The concept of CART is simple to understand and arguably should be ideal for optimum performance. However, in realistic scenarios the unsupervised approach sometimes reduces the functionalities in terms of what user expects. For instance, to access the performance of players in different combined sports, a user may want to first split the data based on the sport or team.
+This study proposes a supervised controlled approach to CART algorithm that would let the user decide or alter the question at certain nodes. The proposed research intends to achieve its designated functions through an Interactive GUI that will dictate a live feature selection at each node. The user will be given choices of features in order of most to least information gain, something the user can overrule the algorithm. Once the appropriate questions have been introduced to the model at intended nodes, user can let the model proceed in its original form to complete the tree.
+
+## Proposed Research II
 In the Program, the data is first stored in a variable. Also the data is fed to K-means module that returns 3 clusters of data. Now we apply the decision tree on (whole dataset) vs (3 clusters indivisually) to yeild the result. 
